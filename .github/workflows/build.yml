@@ -6,7 +6,7 @@ on:
     - '**'
 
 jobs:
-  linux:
+  browser:
     runs-on: ubuntu-22.04
     steps:
     - name: "Install dependencies"
@@ -21,7 +21,7 @@ jobs:
     - name: "Compile"
       run: |
         ls
-        emscripten_build.sh
+        ./emscripten_build.sh
 
     - name: "Upload static files as artifact"
       id: deployment
