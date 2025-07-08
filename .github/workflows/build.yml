@@ -5,6 +5,11 @@ on:
     branches:
     - '**'
 
+permissions:
+  id-token: write
+  pages: write
+
+
 jobs:
   browser:
     runs-on: ubuntu-22.04
@@ -35,9 +40,6 @@ jobs:
       with:
         path: brogue/bin/
   deploy:
-    permissions:
-      id-token: write
-      pages: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -46,4 +48,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v3.0.1
+        uses: actions/deploy-pages@v4

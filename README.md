@@ -1,4 +1,4 @@
-Brogue CE
+Brogue Browser Edition
 =========
 
 > *Countless adventurers before you have descended this torch-lit staircase,
