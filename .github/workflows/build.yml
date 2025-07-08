@@ -13,7 +13,7 @@ jobs:
     - name: "Checkout emsdk"
       uses: actions/checkout@v4
       with:
-        repository: 'https://github.com/emscripten-core/emsdk.git'
+        repository: 'emscripten-core/emsdk.git'
         path: emsdk
 
     - name: "Checkout brogue"
