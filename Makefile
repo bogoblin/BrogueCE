@@ -41,7 +41,7 @@ ifeq ($(GRAPHICS),YES)
 sources += $(addprefix src/platform/,sdl2-platform.c tiles.c)
 cflags += $(shell $(SDL_CONFIG) --cflags)
 cppflags += -DBROGUE_SDL
-libs += $(shell $(SDL_CONFIG) --libs) -lSDL2_image
+libs += $(shell $(SDL_CONFIG) --libs)
 endif
 
 ifeq ($(WEBBROGUE),YES)
@@ -84,6 +84,5 @@ vars:
 vars/%: vars FORCE
 	@echo '$(call escape,$($*))' > vars/$*.tmp
 	@if ! cmp --quiet vars/$*.tmp vars/$*; then cp vars/$*.tmp vars/$*; fi
-
 
 FORCE:
