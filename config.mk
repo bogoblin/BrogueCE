@@ -16,7 +16,7 @@ SDL_CONFIG := sdl2-config
 WEBBROGUE := NO
 
 # Enable debugging mode. See top of Rogue.h for features
-DEBUG := NO
+DEBUG := YES
 
 # Declare this is a release build
 RELEASE := NO
